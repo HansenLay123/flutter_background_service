@@ -174,7 +174,7 @@ public class FlutterBackgroundServicePlugin implements FlutterPlugin, MethodCall
     private void receiveData(JSONObject data) {
         final JSONObject arg = data;
         synchronized (this){
-            for (EventChannel.EventSink sink :
+            for (final EventChannel.EventSink sink :
                     eventSinks.values()) {
                 mainHandler.post(new Runnable() {
                     @Override
